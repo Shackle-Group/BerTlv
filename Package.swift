@@ -5,9 +5,14 @@ import PackageDescription
 
 let package = Package(
     name: "BerTlv",
+    platforms: [
+        .iOS(.v12),
+        .macOS(.v10_14),
+        .watchOS(.v6),
+        .tvOS(.v12),
+    ],
     products: [
-        .library(name: "BerTlv", targets: ["BerTlv"]),
-        .library(name: "BerTlvDynamic", type: .dynamic, targets: ["BerTlv"])
+        .library(name: "BerTlv", targets: ["BerTlv"])
     ],
     targets: [
         .target(name: "BerTlv", path: "BerTlv", exclude: ["BerTlv-Prefix.pch"])
