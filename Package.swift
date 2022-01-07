@@ -12,7 +12,7 @@ let package = Package(
         .tvOS(.v12),
     ],
     products: [
-        .library(name: "BerTlv", targets: ["BerTlv"])
+        .library(name: "BerTlv", type: .dynamic, targets: ["BerTlv"])
     ],
     targets: [
         .target(name: "BerTlv", path: "BerTlv", exclude: ["BerTlv-Prefix.pch"])
